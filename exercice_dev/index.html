@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>CRUD HTML CSS JS</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="css/style.css"/>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <!---======== ICONS =========--->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+<body>
+    <table class="table main_table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Date de création</th>
+            <th scope="col">Etat</th>
+            <th scope="col">Nom</th>
+            <th scope="col">Prénom</th>
+            <th scope="col">Nom d'utilisateur</th>
+            <th scope="col">Matricule</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody id="myTable">
+        </tbody>
+
+      </table>
+      <button type="button" class="btn btn-warning btn-btm" data-toggle="modal" data-target=".bd-example-modal-lg">Ajouter utilisateur</button>
+
+      <!-- Modal Ajouter utilisateur -->
+
+      <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="myModal">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="exampleModalLongTitle">Ajout d'utilisateurs</h4>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <form>
+                      <!-- Row1 -->
+                      <div class="row">
+                        <div class="col">
+                        <label for="exampleInputEmail1">Nom</label>
+                          <input type="text" class="form-control" id="nom" placeholder="" required>
+                        </div>
+                        <div class="col">
+                            <label for="exampleInputEmail1">Prénom</label>
+                          <input type="text" class="form-control" id="prenom" placeholder="" required>
+                        </div>
+                          <div class="col">
+                            <label for="exampleInputEmail1">Etat</label>
+                          <input type="text" class="form-control" id="etat" placeholder="validé / rejeté / en validation" required>
+                        </div>
+                      </div>
+
+                      <!-- Row2 -->
+                      <div class="row row2">
+                        <div class="col">
+                        <label for="exampleInputEmail1">Nom d'utilisateur</label>
+                          <input type="text" class="form-control" id="nom_utilisateur" placeholder="" required>
+                        </div>
+                        <div class="col">
+                            <label for="exampleInputEmail1">Date de création</label>
+                          <input type="text" class="form-control" id="date_creation" placeholder="Exemple : 01/06/2021" required>
+                        </div>
+                      </div>
+
+                      <!-- Row3 -->
+                      <div class="row row2">
+                        <div class="col col-md-6">
+                            <label for="exampleInputEmail1">Matricule</label>
+                          <input type="text" class="form-control" id="matricule" placeholder="Exemple : 54655" required>
+                        </div>
+                      </div>
+                    </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-warning save_btn" id="btn">Enregistrer</button>
+              </div>
+          </div>
+        </div>
+      </div>
+   
+    <!-- Main JS -->
+    <script type="text/javascript" src="js/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</body>
